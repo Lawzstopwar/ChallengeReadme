@@ -1,7 +1,9 @@
 import inquirer from 'inquirer';
 import fs from "fs/promises";
 
-let {questions} = await inquirer
+let Response = {description, installation, usage, license, contributing, tests, questions}
+
+let {description, installation, usage, license, contributing, tests, questions} = await inquirer
   .prompt([
     {
         type: 'input',
@@ -11,7 +13,7 @@ let {questions} = await inquirer
 
       {
         type: 'input',
-        name: 'description',
+        name: 'Project description',
         message: "Project description?",
       },
 
@@ -28,13 +30,11 @@ let {questions} = await inquirer
       },
 
       {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: "License is required?",
-        choices:['mit', 'jumbo', 'microw'],
-        filter(val){
-            return val.toLowercase();
-        },
+        choices:['BSD 3-Clause License', 'Apache 2.0 License', 'Boost Software License 1.0',],
+        
 
       },
 
@@ -66,9 +66,8 @@ let {questions} = await inquirer
       
 ])
 
-let readmeText = 
-
-#Description
+let readmeText = `
+# Description
 ${answers.description}
 
 ## Installation
@@ -79,7 +78,26 @@ ${answers.usage}
 
 
 ## License
-${answers.license}
+${license}
+${generateLicenseBadge(license)[
+
+  function generateLicenseBadge(){
+
+    if (license == "BSD 3-Clause License")
+
+
+    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
+
+    if (license ==  "Apache 2.0 License")
+
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+
+    if (license == "Boost Software License 1.0")
+
+    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+
+  }
+]}
 
 ## Contributing
 ${answers.contributing}
@@ -89,12 +107,12 @@ ${answers.tests}
 
 ## Questions
 ${answers.email}
-${answers.github}
+${answers.github}`
 
 
 fs.writeFile("README.md",readmeText)
 
-console.log (questions);
+console.log(Response)
 
 
 
