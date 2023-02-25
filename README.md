@@ -1,2 +1,2 @@
 # ChallengeReadme
-README Generator
+README.md Generator
