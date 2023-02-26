@@ -1,9 +1,9 @@
 import inquirer from 'inquirer';
 import fs from "fs/promises";
 
-let Response = {description, contents, installation, usage, license, contributing, tests, questions}
 
-let {description, contents, installation, usage, license, contributing, tests, questions} = await inquirer
+
+let {description, contents,installation, usage, license, contributing, tests, email, github} = await inquirer
   .prompt([
     {
         type: 'input',
@@ -74,16 +74,16 @@ let {description, contents, installation, usage, license, contributing, tests, q
 
 let readmeText = `
 # Description
-${answers.description}
+${description}
 
 ## (Table of Contents)
-${answers.contents}
+${contents}
 
 ### Installation
-${answers.installation}
+${installation}
 
 ### Usage
-${answers.usage}
+${usage}
 
 
 ### License
@@ -109,19 +109,23 @@ ${generateLicenseBadge(license)[
 ]}
 
 ### Contributing
-${answers.contributing}
+${contributing}
 
 ### Tests
-${answers.tests}
+${tests}
 
 ### Questions
-${answers.email}
-${answers.github}`
+${email}
+
+
+## Deploy Link
+${github}`
+
+
+
+console.log (description)
 
 
 fs.writeFile("README.md",readmeText)
-
-console.log(Response)
-
 
 
