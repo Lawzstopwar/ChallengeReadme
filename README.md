@@ -29,9 +29,8 @@ undefined
 ### Questions
 undefined
 
-
-## Deploy Link 
-`![https://lawzstopwar.github.io/ChallengeReadme/]`
+## Deploy Link
+![Deploy][https://lawzstopwar.github.io/ChallengeReadme/]
 
 ## animation
 ![GIF](./images/README.md-GIF.gif)
