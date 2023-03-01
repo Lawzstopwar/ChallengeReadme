@@ -27,13 +27,13 @@ let {
   tests, 
   email, 
   github
-} = inquirer.prompt([
+} = await inquirer.prompt([
 
 
 
 {
   type: 'input',
-  name: 'title',
+  name: 'projectTitle',
   message: "Project title?",
 },
 
@@ -75,7 +75,7 @@ let {
 },
 {
   type: 'input',
-  name: 'Test',
+  name: 'tests',
   message: "How to run test?",
 },
 
@@ -129,7 +129,7 @@ ${email}
 ${github}`;
 
 
-console.log (projectTitle);
+
 
 
 fs.writeFile("README.md",readmeText);
