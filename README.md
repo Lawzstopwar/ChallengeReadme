@@ -37,4 +37,4 @@ lawzstopwar@gmail.com
 ![Deploy][https://lawzstopwar.github.io/ChallengeReadme/]
 
 ## animation
-![GIF](./images/README.md-test-run.gif)
+![GIF](./images/READMERUN.gif)
