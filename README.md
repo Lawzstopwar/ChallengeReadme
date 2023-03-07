@@ -1,19 +1,19 @@
 
 
 # Project title
-test
+Readme.md Generator
 
 # Description
-test
+To create an application that could easily be use to generate a README.md by a user or a developer
 
 ## (Table of Contents)
-test
+ The table of contents consisted of Project title, Project description, Installation, Usage, License, Contributing, Tests, and Questions relating to the usage or gaining access to develop the app.
 
 ### Installation
-2
+This gives intsruction on how to run and intall the README.md when working on a project
 
 ### Usage
-usage
+This aspect explains to the user or contributor on how to use the application.This aspect involves a form of direction to make usage theusage of the  README.md app much easier.
 
 ### License
 Apache 2.0 License
@@ -21,14 +21,20 @@ Apache 2.0 License
 
 
 ### Contributing
-29288
+This aspect enables other developers to make contribution,encapsuled with unique instruction on how to make contribution and gain access
 
 ### Tests
-undefined
+ A written test will be provided to show user or a contributor on how to run the application
 
 ### Questions
-e8eu
+lawzstopwar@gmail.com
 
 
 ## Deploy Link
-uuurr
+[Github-Link](https://github.com/Lawzstopwar/ChallengeReadme) 
+
+## Deploy Link
+![Deploy][https://lawzstopwar.github.io/ChallengeReadme/]
+
+## animation
+![GIF](./images/README.md-test-run.gif)
